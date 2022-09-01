@@ -14,7 +14,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { AddProductDialogComponent } from './components/dialog/add-product-dialog/add-product-dialog.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {MatPaginatorModule} from '@angular/material/paginator';
-
+import { NgxScannerQrcodeModule } from 'ngx-scanner-qrcode';
 @NgModule({
   declarations: [
     WrapperComponent,
@@ -24,6 +24,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
   ],
   imports: [
     CommonModule,
+    NgxScannerQrcodeModule,
     DashboardRoutingModule,
     MatSidenavModule,
     MatIconModule,
