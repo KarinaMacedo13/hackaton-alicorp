@@ -1,0 +1,15 @@
+mat-sidenav-container {
+  height: 100%;
+}
+
+.menu-item {
+  margin-left: 8px;
+}
+.chevron-button {
+  transition: 300ms ease-in-out;
+  transform: rotate(0deg);
+  align-items: center;
+}
+.chevron-button.rotated {
+  transform: rotate(180deg);
+}
