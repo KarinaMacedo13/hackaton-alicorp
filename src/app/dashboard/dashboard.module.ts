@@ -18,6 +18,11 @@ import { NgxScannerQrcodeModule } from 'ngx-scanner-qrcode';
 import { SellComponent } from './components/sell/sell.component';
 import { AddQrProductComponent } from './components/dialog/add-qr-product/add-qr-product.component';
 import { AddSellProductComponent } from './components/dialog/add-sell-product/add-sell-product.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { VerticalChartComponent } from './components/dashboard/vertical-chart/vertical-chart.component';
+import { HorizontalChartComponent } from './components/dashboard/horizontal-chart/horizontal-chart.component';
+import { TableChartComponent } from './components/dashboard/table-chart/table-chart.component';
+import { HorizontalminusChartComponent } from './components/dashboard/horizontalminus-chart/horizontalminus-chart.component';
 @NgModule({
   declarations: [
     WrapperComponent,
@@ -26,7 +31,11 @@ import { AddSellProductComponent } from './components/dialog/add-sell-product/ad
     AddProductDialogComponent,
     SellComponent,
     AddQrProductComponent,
-    AddSellProductComponent
+    AddSellProductComponent,
+    VerticalChartComponent,
+    HorizontalChartComponent,
+    TableChartComponent,
+    HorizontalminusChartComponent
   ],
   imports: [
     CommonModule,
@@ -42,6 +51,7 @@ import { AddSellProductComponent } from './components/dialog/add-sell-product/ad
     FormsModule,
     ReactiveFormsModule,
     MatPaginatorModule,
+    NgxChartsModule,
   ]
 })
 export class DashboardModule { }

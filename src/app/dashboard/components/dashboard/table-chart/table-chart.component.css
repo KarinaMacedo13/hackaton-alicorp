@@ -1,0 +1,7 @@
+table {
+    width: 100%;
+}
+h2 {
+    display: flex;
+    justify-content: center;
+}

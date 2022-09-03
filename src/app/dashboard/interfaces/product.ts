@@ -17,3 +17,9 @@ export interface SellData {
     precioVenta:string;
     fechaVenta: string;
 }
+
+export interface ElementData {
+    name: string;
+    position: number;
+    symbol: string;
+}
