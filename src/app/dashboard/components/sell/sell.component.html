@@ -1,1 +1,33 @@
-<p>sell works!</p>
+<div class="btnGroup">
+    <h1>Mis Ventas</h1>
+    <div>
+        <button type="button" class="btn btn-outline-danger" (click)="addProduct()"> <i class="bi bi-tag-fill"></i> Agregar Venta</button>
+        <button type="button" class="btn btn-danger" (click)="addQRProduct()"><i class="bi bi-upc-scan"></i> Escanear QR</button>
+    </div>
+  </div>
+  <div class="containerSell">
+    <div class="productTitle">
+        <h3 class="title">SKU</h3>
+        <h3 class="title titleSubProduct">Nombre del Producto</h3>
+        <h3 class="title titleSubProductSale">Fecha de Venta</h3>
+        <h3 class="title titleSubProductQ">Cantidad</h3>
+        <h3 class="title titleSubProductV">Precio de Venta</h3>
+        <h3 class="title">Acción</h3>
+    </div>
+    <div class="card" *ngFor="let product of dataSellProduct">
+        <div class="card-body ">
+            <div class="product">
+                <p>{{product.sku}}</p>
+                <p>{{product.nombre}}</p>
+                <p>{{product.fechaVenta}}</p>
+                <p>{{product.cantidad}}</p>
+                <p>{{product.precioVenta}}</p>
+                <button mat-icon-button class="deleteIcon" (click)="deleteSellProduct(product)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </div>
+        
+      </div>
+
+  </div>

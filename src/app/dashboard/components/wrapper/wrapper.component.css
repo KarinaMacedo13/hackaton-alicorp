@@ -1,6 +1,9 @@
 mat-sidenav-container {
   height: 100%;
 }
+.logo{
+  height: 2em;
+}
 
 .menu-item {
   margin-left: 8px;
@@ -16,5 +19,11 @@ mat-sidenav-container {
 
 mat-toolbar{
   background-color: white;
+  display: flex;
+  justify-content: flex-end;
+}
 
+.img-responsive {
+  margin-left: 1em;
+  margin-right: 1em;
 }

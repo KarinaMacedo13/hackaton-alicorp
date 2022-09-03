@@ -17,6 +17,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { NgxScannerQrcodeModule } from 'ngx-scanner-qrcode';
 import { SellComponent } from './components/sell/sell.component';
 import { AddQrProductComponent } from './components/dialog/add-qr-product/add-qr-product.component';
+import { AddSellProductComponent } from './components/dialog/add-sell-product/add-sell-product.component';
 @NgModule({
   declarations: [
     WrapperComponent,
@@ -24,7 +25,8 @@ import { AddQrProductComponent } from './components/dialog/add-qr-product/add-qr
     InfoComponent,
     AddProductDialogComponent,
     SellComponent,
-    AddQrProductComponent
+    AddQrProductComponent,
+    AddSellProductComponent
   ],
   imports: [
     CommonModule,

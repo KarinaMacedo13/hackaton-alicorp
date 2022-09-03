@@ -18,7 +18,6 @@ export class InfoComponent implements OnInit {
   displayedColumns: string[] = ['sku', 'nombre', 'precio', 'cantidad', 'fechaVencimiento','precioVenta','fechaCompra','acción'];
   dataSource!:MatTableDataSource<AddData>;
   @ViewChild(MatSort) sort!: MatSort;
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   constructor(public dialog: MatDialog, private firebaseproductservice:FirebaseProductService) { }
   ngOnInit(): void {
@@ -29,7 +28,6 @@ export class InfoComponent implements OnInit {
     this.firebaseproductservice.getProduct().subscribe({
       next: (res) => {
           this.dataSource = new MatTableDataSource(res);
-          this.dataSource.paginator = this.paginator;
           this.dataSource.sort = this.sort;
       },
       error: (err) => {

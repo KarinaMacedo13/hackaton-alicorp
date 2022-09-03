@@ -1,0 +1,42 @@
+.btnGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+.btn {
+    margin-right: 1em;
+}
+.productTitle{
+    margin-left: 1em;
+    margin-right: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.containerSell{
+    margin-left: 2em;
+    margin-right: 2em;
+}
+.titleSubProduct{
+    margin-left: 5em;
+}
+.titleSubProductSale{
+    margin-left: 10em;
+}
+.titleSubProductQ{
+margin-left: 2em;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 1em;
+}
+
+

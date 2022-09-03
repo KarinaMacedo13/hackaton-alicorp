@@ -8,3 +8,12 @@ export interface AddData {
     precioVenta:string;
     fechaCompra: Date;
 }
+
+export interface SellData {
+    id?:number;
+    sku: number;
+    nombre: string;
+    cantidad: number;
+    precioVenta:string;
+    fechaVenta: string;
+}

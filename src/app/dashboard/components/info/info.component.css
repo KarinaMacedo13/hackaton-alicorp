@@ -2,9 +2,25 @@ table {
     width: 90%;
 }
 
-mat-paginator {
-    width: 90%;
-}
+
 th.mat-sort-header {
     color: red;
+}
+.btnGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+.btn {
+    margin-right: 1em;
+}
+.mat-elevation-z8{
+    margin-left: 5em;
+}
+.header {
+    font-weight: bold;
+    color: black;
 }
