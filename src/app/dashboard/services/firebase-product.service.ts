@@ -15,10 +15,10 @@ export class FirebaseProductService {
   }
   getProduct():Observable<AddData[]>{
     const ref = collection(this.firestore, 'product');
-    return collectionData(ref, {idField: 'sku'}) as Observable<AddData[]>;
+    return collectionData(ref, {idField: 'id'}) as Observable<AddData[]>;
   }
   deleteProduct(addData:AddData){
-    const ref = doc(this.firestore,`product/${addData.sku}`);
+    const ref = doc(this.firestore,`product/${addData.id}`);
     console.log(ref);
     return deleteDoc(ref);
   }

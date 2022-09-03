@@ -17,6 +17,8 @@ export class AddProductDialogComponent implements OnInit {
       precio: ['', Validators.required],
       cantidad: ['', Validators.required],
       fechaVencimiento: ['', Validators.required],
+      precioVenta: ['', Validators.required],
+      fechaCompra: ['', Validators.required],
     });
    }
 
@@ -29,6 +31,8 @@ export class AddProductDialogComponent implements OnInit {
       precio: this.addForm.get('precio')?.value,
       cantidad: this.addForm.get('cantidad')?.value,
       fechaVencimiento: this.addForm.get('fechaVencimiento')?.value,
+      precioVenta: this.addForm.get('precioVenta')?.value,
+      fechaCompra: this.addForm.get('fechaCompra')?.value,
     }
     console.log(PRODUCT);
     const response = await this.firebaseproductservice.addProduct(PRODUCT);

@@ -4,19 +4,25 @@
             <mat-list-item>
                 <mat-icon mat-list-icon class="chevron-button sidenav-button" (click)="isExpanded = !isExpanded" [ngClass]="{'rotated': isExpanded}">menu</mat-icon>
             </mat-list-item>
+            <mat-list-item [routerLink]="'sell'">
+                <mat-icon mat-list-icon class="">domain</mat-icon>
+                <span *ngIf = "isExpanded">Info</span>
+            </mat-list-item>
             <mat-list-item [routerLink]="'dashboard'">
                 <mat-icon mat-list-icon class="">home</mat-icon>
                 <span *ngIf = "isExpanded">Dashboard</span>
             </mat-list-item>
             <mat-list-item [routerLink]="'info'">
-                <mat-icon mat-list-icon class="">domain</mat-icon>
-                <span *ngIf = "isExpanded">Info</span>
+                <mat-icon mat-list-icon class="">inventory_2</mat-icon>
+                <span *ngIf = "isExpanded">Inventario</span>
             </mat-list-item>
         </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>
         <mat-toolbar>
-            <h4>Hello everyone</h4>
+            <i class="bi bi-bell"></i>
+            <img class="img-responsive" src="../../../../assets/Photo.png" alt="placeholder" />
+            <h2>Pepito de los Palotes</h2>
         </mat-toolbar>
             <router-outlet></router-outlet>
     </mat-sidenav-content>

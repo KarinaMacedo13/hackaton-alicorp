@@ -6,6 +6,7 @@ import { AddProductDialogComponent } from '../dialog/add-product-dialog/add-prod
 import {MatTableDataSource} from '@angular/material/table';
 import {MatSort} from '@angular/material/sort';
 import {MatPaginator} from '@angular/material/paginator';
+import { AddQrProductComponent } from '../dialog/add-qr-product/add-qr-product.component';
 
 
 @Component({
@@ -14,7 +15,7 @@ import {MatPaginator} from '@angular/material/paginator';
   styleUrls: ['./info.component.css']
 })
 export class InfoComponent implements OnInit {
-  displayedColumns: string[] = ['sku', 'nombre', 'precio', 'cantidad', 'fechaVencimiento','acción'];
+  displayedColumns: string[] = ['sku', 'nombre', 'precio', 'cantidad', 'fechaVencimiento','precioVenta','fechaCompra','acción'];
   dataSource!:MatTableDataSource<AddData>;
   @ViewChild(MatSort) sort!: MatSort;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -39,6 +40,10 @@ export class InfoComponent implements OnInit {
 
   addProduct(){
     this.dialog.open(AddProductDialogComponent, {
+    });
+  }
+  addQRProduct(){
+    this.dialog.open(AddQrProductComponent, {
     });
   }
   async deleteProduct(element: AddData){

@@ -1,22 +1,27 @@
-<button mat-fab color="primary" aria-label="Example icon button with a delete icon" (click)="addProduct()">
-    <mat-icon>add</mat-icon>
-</button>
-
+<button type="button" class="btn btn-outline-danger" (click)="addProduct()"> <i class="bi bi-tag-fill"></i> Agregar Compra</button>
+<button type="button" class="btn btn-danger" (click)="addQRProduct()"><i class="bi bi-upc-scan"></i> Escanear QR</button>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
 
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
-  
     <!-- Position Column -->
     <ng-container matColumnDef="sku">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> SKU. </th>
       <td mat-cell *matCellDef="let element"> {{element.sku}} </td>
     </ng-container>
-  
+
     <!-- Name Column -->
     <ng-container matColumnDef="nombre" >
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre del Producto </th>
       <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    </ng-container>
+    <ng-container matColumnDef="fechaVencimiento">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Fecha de Vencimiento </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaVencimiento}} </td>
+    </ng-container>
+    <ng-container matColumnDef="fechaCompra">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Fecha de Compra </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaCompra}} </td>
     </ng-container>
     <!-- Symbol Column -->
     <ng-container matColumnDef="cantidad">
@@ -26,13 +31,14 @@
   
     <!-- Weight Column -->
     <ng-container matColumnDef="precio">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Precio </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Precio de Compra</th>
       <td mat-cell *matCellDef="let element"> {{element.precio | currency}} </td>
     </ng-container>
-    <ng-container matColumnDef="fechaVencimiento">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> Fecha de Vencimiento </th>
-      <td mat-cell *matCellDef="let element"> {{element.fechaVencimiento}} </td>
+    <ng-container matColumnDef="precioVenta">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Precio de Venta</th>
+      <td mat-cell *matCellDef="let element"> {{element.precioVenta | currency}} </td>
     </ng-container>
+   
     <ng-container matColumnDef="acción">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Acción </th>
       <td mat-cell *matCellDef="let element">

@@ -1,0 +1,17 @@
+<div [style.padding.px]="20">
+    <h1> ngx-scanner-qrcode </h1>
+  
+    <!-- ngx-scanner-qrcode -->
+    <ngx-scanner-qrcode #action="scanner" (data)="onData($event)"></ngx-scanner-qrcode>
+
+  
+    <!-- Loading -->
+    <p *ngIf="action.isLoading">⌛ Loading video...</p>
+  
+    <!-- toggleCamera -->
+    <button class="btn btn-danger" (click)="action.toggleCamera()" [class.btn-info]="!action.isStart" [class.btn-warning]="action.isStart" [disabled]="action.isLoading">
+        <i *ngIf="!action.isStart" class="bi bi-upc-scan"> Escanear QR</i>
+        <i *ngIf="action.isStart" class="bi bi-upc-scan"> Detener Escaner QR</i>
+    </button>
+  </div>
+

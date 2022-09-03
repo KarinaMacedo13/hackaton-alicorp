@@ -13,3 +13,8 @@ mat-sidenav-container {
 .chevron-button.rotated {
   transform: rotate(180deg);
 }
+
+mat-toolbar{
+  background-color: white;
+
+}

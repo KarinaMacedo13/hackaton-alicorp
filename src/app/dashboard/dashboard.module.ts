@@ -15,12 +15,16 @@ import { AddProductDialogComponent } from './components/dialog/add-product-dialo
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { NgxScannerQrcodeModule } from 'ngx-scanner-qrcode';
+import { SellComponent } from './components/sell/sell.component';
+import { AddQrProductComponent } from './components/dialog/add-qr-product/add-qr-product.component';
 @NgModule({
   declarations: [
     WrapperComponent,
     DashboardComponent,
     InfoComponent,
-    AddProductDialogComponent
+    AddProductDialogComponent,
+    SellComponent,
+    AddQrProductComponent
   ],
   imports: [
     CommonModule,
