@@ -19,10 +19,10 @@ import { SellComponent } from './components/sell/sell.component';
 import { AddQrProductComponent } from './components/dialog/add-qr-product/add-qr-product.component';
 import { AddSellProductComponent } from './components/dialog/add-sell-product/add-sell-product.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { VerticalChartComponent } from './components/dashboard/vertical-chart/vertical-chart.component';
 import { HorizontalChartComponent } from './components/dashboard/horizontal-chart/horizontal-chart.component';
 import { TableChartComponent } from './components/dashboard/table-chart/table-chart.component';
 import { HorizontalminusChartComponent } from './components/dashboard/horizontalminus-chart/horizontalminus-chart.component';
+import { HorizontalMarginComponent } from './components/dashboard/horizontal-margin/horizontal-margin.component';
 @NgModule({
   declarations: [
     WrapperComponent,
@@ -32,10 +32,10 @@ import { HorizontalminusChartComponent } from './components/dashboard/horizontal
     SellComponent,
     AddQrProductComponent,
     AddSellProductComponent,
-    VerticalChartComponent,
     HorizontalChartComponent,
     TableChartComponent,
-    HorizontalminusChartComponent
+    HorizontalminusChartComponent,
+    HorizontalMarginComponent
   ],
   imports: [
     CommonModule,
